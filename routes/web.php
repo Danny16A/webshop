@@ -10,6 +10,9 @@ use App\Http\Controllers\Client\OrderController;
 use App\Http\Controllers\Client\ProductController;
 use App\Http\Controllers\Client\ShopController;
 use App\Http\Controllers\Client\UserController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +41,12 @@ Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/blogDetail', [BlogController::class, 'detail']);
 Route::get('/cart' , [CartController::class, 'index']);
 Route::get('/order', [OrderController::class, 'track']);
+Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin/product/category', [CategoryController::class, 'index'])->name('admin.category');
+Route::get('/admin/product/category/create', [CategoryController::class, 'create']);
+Route::post('/admin/product/category/create', [CategoryController::class, 'store']);
+Route::delete('/admin/product/category/delete/{id}', [CategoryController::class, 'destroy']);
+Route::get('/admin/product/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
+
+
+

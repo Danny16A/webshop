@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Duong Shop - @yield('title')</title>
+    <title>Danny Shop - @yield('title')</title>
 
     <!-- SEO Meta Tags-->
     <meta name="description" content="Cartzilla - Bootstrap E-commerce Template">
